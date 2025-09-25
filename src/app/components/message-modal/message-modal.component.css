@@ -1,0 +1,59 @@
+/* Modal Header Custom */
+.modal-header-custom {
+  justify-content: space-between;
+  padding: var(--spacing-lg) 0 var(--spacing-md) 0;
+  border-bottom: 1px solid #e1e5e9;
+  margin-bottom: var(--spacing-lg);
+}
+
+.modal-header-custom h2 {
+  margin: 0;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-black);
+}
+
+.close-button {
+  background: none;
+  border: none;
+  padding: var(--spacing-sm);
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--color-gray-dark);
+  transition: var(--transition-fast);
+}
+
+.close-button:hover {
+  background-color: var(--color-gray-light);
+  color: var(--color-black);
+}
+
+/* Modal Footer Custom */
+.modal-footer-custom {
+  gap: var(--spacing-md);
+  justify-content: stretch;
+  padding: var(--spacing-lg) 0 0 0;
+  border-top: 1px solid #e1e5e9;
+  margin-top: var(--spacing-xl);
+}
+
+.message-form {
+  padding: 0;
+}
+
+.char-count {
+  font-size: var(--font-size-small);
+  color: var(--color-gray-dark);
+  margin-top: var(--spacing-sm);
+}
+
+.char-count.over-limit {
+  color: #ef4444;
+}
+
+/* Placeholder styling for textarea */
+.form-textarea::placeholder {
+  color: var(--color-gray-dark);
+  font-style: italic;
+}
