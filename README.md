@@ -55,7 +55,9 @@ npm install
 
 ```bash
 # Servidor de desarrollo
-npm start
+npm start 
+si hay errores usar
+npm install --force or --legacy-peer-deps
 # o
 ng serve
 
@@ -313,6 +315,3 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 - **Documentación**: [Wiki del proyecto](https://github.com/NataliaCor/motivkids/wiki)
 - **Issues**: [GitHub Issues](https://github.com/NataliaCor/motivkids/issues)
 
----
-
-⭐ **¡Si te gusta este proyecto, no olvides darle una estrella!** ⭐
