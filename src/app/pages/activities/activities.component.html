@@ -1,0 +1,73 @@
+<div class="activities-page">
+  <!-- Navigation Bar -->
+  <app-navbar 
+    [userName]="userName"
+    [userAvatar]="userAvatar"
+    [notificationCount]="notificationCount"
+    [messageCount]="messageCount">
+  </app-navbar>
+
+  <!-- Main Content -->
+  <main class="activities-main">
+    <div class="activities-container">
+      
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Agregar Nueva Actividad</h1>
+      </div>
+      
+      <!-- Search Field -->
+      <div class="search-section">
+        <app-search-input
+          placeholder="Buscar actividades..."
+          [value]="searchValue"
+          size="medium"
+          (valueChange)="onSearch($event)">
+        </app-search-input>
+      </div>
+
+      <!-- Suggestions Section -->
+      <section class="suggestions-section">
+        <h2 class="section-title">Sugerencias para ti</h2>
+        
+        <div class="suggestions-grid">
+          @for (activity of suggestedActivities; track activity.id) {
+            <app-activity-card
+              [activity]="activity"
+              variant="suggestion"
+              (add)="onAddActivity($event)">
+            </app-activity-card>
+          }
+        </div>
+      </section>
+
+      <!-- Search Results Section -->
+      <section class="results-section">
+        <h2 class="section-title">Resultados de búsqueda</h2>
+        
+        <div class="results-list">
+          @for (activity of searchResults; track activity.id) {
+            <div class="result-item">
+              <div class="result-icon">
+                <i [class]="activity.iconClass"></i>
+              </div>
+              <div class="result-content">
+                <h3 class="result-title">{{ activity.title }}</h3>
+                <p class="result-description">{{ activity.description }}</p>
+              </div>
+              <div class="result-action">
+                <app-button
+                  text="+ Agregar"
+                  variant="turquoise"
+                  size="small"
+                  (buttonClick)="onAddActivity(activity)">
+                </app-button>
+              </div>
+            </div>
+          }
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
