@@ -66,16 +66,16 @@
           </app-data-table>
         </div>
 
-        <!-- Alarm Modal -->
-        <app-alarm-modal
-          [isOpen]="isModalOpen"
-          [mode]="modalMode"
-          [initialData]="initialAlarmData"
-          (close)="onModalClose()"
-          (save)="onAlarmSave($event)">
-        </app-alarm-modal>
-
       </app-card>
     </div>
   </main>
+
+  <!-- Alarm Modal - Moved outside the card for proper overlay -->
+  <app-alarm-modal
+    [isOpen]="isModalOpen"
+    [mode]="modalMode"
+    [initialData]="initialAlarmData"
+    (close)="onModalClose()"
+    (save)="onAlarmSave($event)">
+  </app-alarm-modal>
 </div>
