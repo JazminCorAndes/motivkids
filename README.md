@@ -55,7 +55,9 @@ npm install
 
 ```bash
 # Servidor de desarrollo
-npm start
+npm start 
+si hay errores usar
+npm install --force or --legacy-peer-deps
 # o
 ng serve
 
